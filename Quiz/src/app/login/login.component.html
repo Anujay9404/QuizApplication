@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 30%;
+  padding: 8px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: content-box;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 8px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.bg-img {
+  /* The image used */
+  background-image: url("https://media.istockphoto.com/photos/innovation-and-new-ideas-lightbulb-concept-with-question-mark-picture-id1279690557?b=1&k=20&m=1279690557&s=170667a&w=0&h=BnH7EPIgwwpPyKMfeBJr87Ql900NFKjLYknrzvfi3Dw=");
+
+  /* Control the height of the image */
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container {
+  position: absolute;
+  left: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+</style>
+<body>
+<div class="bg-img">
+<form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()" class="container">
+    <!-- <div class="imgcontainer">
+   
+    </div>   -->
+    
+<div class="form-group">
+
+<label for="email">Email</label>
+<input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && fval.email.errors }" placeholder="Enter email here"/>
+<div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+<div *ngIf="fval.email.errors.required">Email is required</div>
+<div *ngIf="fval.email.errors.email">Enter valid email address</div>
+</div>
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && fval.password.errors }" placeholder="Enter password here" />
+<div *ngIf="submitted && fval.password.errors" class="invalid-feedback">
+<div *ngIf="fval.password.errors.required">Password is required</div>
+</div>
+</div>
+
+<div class="form-group">
+<button [disabled]="loading" class="btn btn-primary">
+<span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+LogIn
+</button>
+
+</div>
+</form>
+</div>
+</body>
+</html>
+

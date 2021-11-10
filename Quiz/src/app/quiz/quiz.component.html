@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <h1>
+    <a class="navbar-brand"><font color="green-900" aria-setsize="4">Quiz Application</font></a></h1>
+  </div>
+</nav>
+
+  <ul>
+    <li *ngFor="let question of quizes[0].questions; let i = index;" [attr.data-index]="i">
+
+          {{question.text}}
+          
+        <ul>
+          <li *ngFor="let choice of question.choices" >
+            <input type="radio"  id="Question1">
+            {{choice}}
+          </li>
+        </ul>
+    </li>
+</ul>
+
+
+<button class="btn btn-primary" (click)="onSubmit();">Submit Quiz</button>
+ 
