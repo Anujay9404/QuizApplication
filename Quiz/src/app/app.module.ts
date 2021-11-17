@@ -15,6 +15,7 @@ import { QuizService } from './_services/quiz.service';
 import { UserService } from './_services/user.service';
 import { AddQuizComponent } from './add-quiz/add-quiz.component';
 import { ResultComponent } from './result/result.component';
+import { ViewComponent } from './view/view.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ResultComponent } from './result/result.component';
     QuizComponent,
     AddQuizComponent,
     ResultComponent,
+    ViewComponent,
   
   ],
   imports: [

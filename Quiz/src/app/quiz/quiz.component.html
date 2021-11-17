@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  background-color: greenyellow;
+  color: black;
+}
+
+</style>
+</head>
+</html>
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <h1>
@@ -11,14 +25,16 @@
           {{question.text}}
           
         <ul>
-          <li *ngFor="let choice of question.choices" >
-            <input type="radio"  id="Question1">
+          <label>
+          <li *ngFor="let choice of question.choices;let j=index;" [attr.data-index]="j">
+            <input type="radio"  id="Question1"  (change)="OnAnswer(j,question.correctAns)">
             {{choice}}
           </li>
+        </label>
         </ul>
     </li>
 </ul>
 
-
 <button class="btn btn-primary" (click)="onSubmit();">Submit Quiz</button>
+<p >Your Score is:   {{results}}</p>
  

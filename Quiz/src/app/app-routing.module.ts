@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { AddQuizComponent } from './add-quiz/add-quiz.component';
 import { ResultComponent } from './result/result.component';
+import { ViewComponent } from './view/view.component';
 
 
  
@@ -24,13 +25,21 @@ const routes: Routes = [
  component: QuizComponent
  },
  {
-     path: 'addquiz',
+     path: 'add-quiz',
      component: AddQuizComponent
      },
      {
          path: 'result',
          component: ResultComponent
          },
+         {
+            path: 'home',
+            component: HomeComponent
+            },
+            {
+                path: 'view',
+                component: ViewComponent
+                },
  { path: '**', redirectTo: '' }
  
  ];

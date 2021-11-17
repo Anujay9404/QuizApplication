@@ -9,7 +9,7 @@ export class UserService {
 constructor(private http: HttpClient) { }
  
 login(user: User) {
-return this.http.post('http://localhost:9011/users/', user);
+return this.http.post('http://localhost:9011/login/', user);
 }
  
 

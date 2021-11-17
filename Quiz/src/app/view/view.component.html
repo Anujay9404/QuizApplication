@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+  <html>
+  <style>
+    ul {
+  background: grey;
+  padding: 20px;
+}
+button {
+  float: right;
+
+  background-color: #4CAF50;
+}
+a {
+  color: black;
+  text-align: center;
+}
+  </style>
+  <body>
+<ul>
+    <li *ngFor="let quiz of quizes">
+      <a (click)="quizGame()">{{quiz.name}}></a>
+        <button (click)="deleteQuiz(quiz.id)" class="btn btn-danger" style="color: red;">  X </button>
+    </li>
+</ul>
+
+</body>
+</html>

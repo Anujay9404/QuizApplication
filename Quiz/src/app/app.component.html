@@ -1,16 +1,17 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
-     <li class="nav-item">
-      <a class="nav-link active" aria-current="page"  routerLink="/add-quiz">Add Quiz</a>
-    </li>
+     
   </ul>
 </div>
-</nav> -->
+</nav>
 
 <!-- main app container -->
 <div class="jumbotron">
+  
   <a *ngIf="currentUser" class="nav-item nav-link" style="cursor:pointer"(click)="logout()">LogIn</a>
+
+    <a class="nav-link active" aria-current="page"  routerLink="/add-quiz">Add Quiz</a>
   
   <div class="container">
   <div class="row">

@@ -1,1 +1,73 @@
-<p>add-quiz works!</p>
+
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 30%;
+  padding: 8px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: content-box;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 8px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+          <form>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Quiz name</span>
+              <input type="text" #name (keyup)="0" class="form-control" placeholder="Enter Title" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Question</span>
+                    <input type="text" #question (keyup)="0" class="form-control" placeholder="Enter Title" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Option1</span>
+                    <input type="text" #op1 (keyup)="0" class="form-control" placeholder="Enter Course" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                     <span class="input-group-text" id="basic-addon1">Option2</span>
+                     <input type="text" #op2 (keyup)="0" class="form-control" placeholder="Enter Description" aria-label="Username" aria-describedby="basic-addon1">
+                   </div>
+                  <div class="input-group mb-3">
+                      <span class="input-group-text"  id="basic-addon1">Option3</span>
+                      <input type="text" #op3 (keyup)="0" class="form-control" placeholder="Enter Rating" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                     <span class="input-group-text"  id="basic-addon1">CorrectAns</span>
+                     <input type="text" #CorrectAns (keyup)="0" class="form-control" placeholder="Enter Fees" aria-label="Username" aria-describedby="basic-addon1">
+                   </div>
+                  <div class="input-group mb-3">
+                    
+                    <button class="btn btn-primary" (click)="getQuiz(name.value,question.value, op1.value,op2.value,op3.value,CorrectAns.value)">Add </button>
+                  </div>
+                </form> 
+                
+              </body>
+              </html>
+            
+
+ 
+    
